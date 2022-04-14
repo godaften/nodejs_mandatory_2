@@ -1,5 +1,4 @@
 import express from 'express'
-// import Product from '../frontend/src/components/Product.js'
 import data from './data.js'
 
 const app = express()
