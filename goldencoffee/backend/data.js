@@ -18,7 +18,7 @@ const data = {
       category: 'Coffee Variants',
       image:'/images/medium-roasted-1.jpg',
       price: 100,
-      countInStock: 10,
+      countInStock: 0,
       brand:'Golden Coffee',
       rating: 4.5,
       numReviews: 10,

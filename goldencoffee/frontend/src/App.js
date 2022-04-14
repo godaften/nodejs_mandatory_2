@@ -3,12 +3,12 @@ import HomeScreen from './screens/HomeScreen'
 import ProductScreen from './screens/ProductScreen'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
-import {LinkContainer} from 'react-router-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
 
 function App() {
 	return (
 		<BrowserRouter>
-			<div className='d-flex flex-column site-container'>
+			<div className="d-flex flex-column site-container">
 				<header>
 					<Navbar bg="dark" variant="dark">
 						<Container>
@@ -19,15 +19,15 @@ function App() {
 					</Navbar>
 				</header>
 				<main>
-					<Container>
-					<Routes>
-						<Route path="/product/:slug" element={<ProductScreen />} />
-						<Route path="/" element={<HomeScreen />} />
-					</Routes>
+					<Container className="mt-3">
+						<Routes>
+							<Route path="/product/:slug" element={<ProductScreen />} />
+							<Route path="/" element={<HomeScreen />} />
+						</Routes>
 					</Container>
 				</main>
 				<footer>
-					<div className='text-center'>Copyright by Golden Coffee</div>
+					<div className="text-center">Copyright by Golden Coffee</div>
 				</footer>
 			</div>
 		</BrowserRouter>
