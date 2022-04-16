@@ -1,3 +1,4 @@
+import { Link, useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { Store } from '../Store'
 import { Helmet } from 'react-helmet-async'
@@ -8,7 +9,6 @@ import ListGroup from 'react-bootstrap/ListGroup'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import ListGroupItem from 'react-bootstrap/esm/ListGroupItem'
-import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 export default function CartScreen() {
@@ -47,7 +47,7 @@ export default function CartScreen() {
 				<Col md={8}>
 					{cartItems.length === 0 ? (
 						<MessageBox>
-							Cart is empty. <link to="/">Go Shopping</link>
+							Cart is empty. <Link to="/">Go Shopping</Link>
 						</MessageBox>
 					) : (
 						<ListGroup>
