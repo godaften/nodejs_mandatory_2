@@ -1,7 +1,7 @@
 const data = {
 	products: [
 		{
-			_id: '1',
+			//	_id: '1',
 			name: 'Light Roasted',
 			slug: 'light-roasted',
 			category: 'Coffee Variants',
@@ -14,7 +14,7 @@ const data = {
 			description: 'Light roasted coffee beans',
 		},
 		{
-			_id: '2',
+			//	_id: '2',
 			name: 'Medium Roasted',
 			slug: 'medium-roasted',
 			category: 'Coffee Variants',
@@ -27,7 +27,7 @@ const data = {
 			description: 'Medium roasted coffee beans',
 		},
 		{
-			_id: '3',
+			//	_id: '3',
 			name: 'Dark Roasted',
 			slug: 'dark-roasted',
 			category: 'Coffee Variants',
@@ -40,7 +40,7 @@ const data = {
 			description: 'Dark roasted coffee beans',
 		},
 		{
-			_id: '4',
+			//	_id: '4',
 			name: 'Espresso',
 			slug: 'espresso',
 			category: 'Coffee Variants',
