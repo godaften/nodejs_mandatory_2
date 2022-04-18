@@ -13,6 +13,7 @@ import { useContext } from 'react'
 import { Store } from './Store'
 import CartScreen from './screens/CartScreen'
 import SigninScreen from './screens/SigninScreen'
+import SignUpScreen from './screens/SignUpScreen'
 
 function App() {
 	const { state, dispatch: ctxDispatch } = useContext(Store)
@@ -26,7 +27,7 @@ function App() {
 	return (
 		<BrowserRouter>
 			<div className="d-flex flex-column site-container">
-				<ToastContainer position='bottom-center' limit={1} />
+				<ToastContainer position="bottom-center" limit={1} />
 				<header>
 					<Navbar bg="dark" variant="dark">
 						<Container>
@@ -74,6 +75,7 @@ function App() {
 							<Route path="/product/:slug" element={<ProductScreen />} />
 							<Route path="/cart" element={<CartScreen />} />
 							<Route path="/signin" element={<SigninScreen />} />
+							<Route path="/signup" element={<SignUpScreen />} />
 							<Route path="/" element={<HomeScreen />} />
 						</Routes>
 					</Container>
