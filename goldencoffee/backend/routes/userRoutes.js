@@ -3,6 +3,17 @@ import bcrypt from 'bcrypt'
 import expressAsyncHandler from 'express-async-handler'
 import User from '../models/userModel.js'
 import { isAuth, generateToken } from '../utils.js'
+// import nodemailer from 'nodemailer'
+// import sendgridTransport from 'nodemailer-sendgrid-transport'
+
+
+// JEG KAN IKKE FÅ MAIL TIL AT VIRKE - DERFOR UDKOMMENTERET
+// const transporter = nodemailer.createTransport(sendgridTransport({
+// 	auth:{
+// 		api_user: "eP6YsZdwQXaLlW6ADTzrlQ",
+// 		api_key:"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"
+// 	}
+// }))
 
 const userRouter = express.Router()
 
@@ -35,6 +46,18 @@ userRouter.post(
 			password: bcrypt.hashSync(req.body.password,10),
 		})
 		const user = await newUser.save()
+
+		// user=>{
+		// 	transporter.sendMail({
+		// 		to:user.email,
+		// 		from:"no-reply@goldencoffee.com",
+		// 		subject: 'Welcome to Golden Coffee',
+		// 		html:"<h1>Welcome my friend!</h1>"
+		// 	})
+		// 	// .catch(err=>
+		// 	// 	console.log(err))
+		// }
+
 		res.send({
 			_id: user._id,
 			name: user.name,
@@ -44,6 +67,7 @@ userRouter.post(
 		})
 	})
 )
+
 
 userRouter.put(
 	'/profile',
