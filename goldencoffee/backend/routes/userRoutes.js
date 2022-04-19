@@ -10,8 +10,8 @@ import { isAuth, generateToken } from '../utils.js'
 // JEG KAN IKKE FÅ MAIL TIL AT VIRKE - DERFOR UDKOMMENTERET
 // const transporter = nodemailer.createTransport(sendgridTransport({
 // 	auth:{
-// 		api_user: "eP6YsZdwQXaLlW6ADTzrlQ",
-// 		api_key:"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"
+// 		api_user: process.env.SENDGRID_USER,
+// 		api_key: process.env.SENDGRID_KEY
 // 	}
 // }))
 
