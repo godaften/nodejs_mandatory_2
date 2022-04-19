@@ -105,8 +105,8 @@ export default function CartScreen() {
 								<ListGroupItem>
 									<h3>
 										Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}{' '}
-										items) : $
-										{cartItems.reduce((a, c) => a + c.price * c.quantity, 0)}
+										items) : {''}
+										{cartItems.reduce((a, c) => a + c.price * c.quantity, 0)} kr.
 									</h3>
 								</ListGroupItem>
 								<ListGroupItem>

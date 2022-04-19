@@ -7,6 +7,27 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+a {
+	text-decoration: none;
+	color: darkgoldenrod;
+	font-weight: bold;
+}
+
+h1 {
+	color: darkgoldenrod;
+	margin-top:2rem;
+}
+
+.footer {
+	padding:1rem;
+	background-color: black;
+	color:darkgoldenrod;
+}
+
+.navbar-dark .navbar-brand { 
+	color:darkgoldenrod;
+}
+
 .site-container {
 	min-height: 100vh;
 }
@@ -17,7 +38,13 @@ main {
 
 .btn-primary {
 	background-color: darkgoldenrod;
+	border: none;
+	/* box-shadow: 2px 2px 10px #888888; */
 }
+.btn-primary:hover {
+	background-color: black;
+	}
+
 .products {
 	display: flex;
 	flex-wrap: wrap;
@@ -51,4 +78,13 @@ main {
 
 .small-container {
 	max-width: 600px;
+}
+
+.card {
+	border: 2px solid darkgoldenrod;
+}
+
+.card-title {
+	color: darkgoldenrod;
+	text-decoration: none;
 }

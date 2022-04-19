@@ -7,7 +7,7 @@ import { Helmet } from 'react-helmet-async'
 import { useContext, useEffect, useState } from 'react'
 import { Store } from '../Store'
 import { toast } from 'react-toastify'
-import { getError } from '../utils'
+//import { getError } from '../utils'
 
 export default function SignUpScreen() {
 	const navigate = useNavigate()
@@ -35,12 +35,13 @@ export default function SignUpScreen() {
 				email,
 				password,
 			})
+			
 			ctxDispatch({ type: 'USER_SIGNIN', payload: data })
 			localStorage.setItem('userInfo', JSON.stringify(data))
 			navigate(redirect || '/')
 		} catch (err) {
-			toast.error(getError(err))
-			// toast.error('Invalid username or password')
+			//toast.error(getError(err))
+			toast.error('Something went wrong creating the user...')
 		}
 	}
 
@@ -77,14 +78,14 @@ export default function SignUpScreen() {
 						required
 						onChange={(e) => setPassword(e.target.value)}
 					/>
-				</Form.Group>
-				<Form.Group className="mb-3" controlId="confirmpassword">
+					<Form.Group className="mb-3" controlId="confirmPassword">
 					<Form.Label>Confirm Password</Form.Label>
 					<Form.Control
 						type="password"
-						required
 						onChange={(e) => setConfirmPassword(e.target.value)}
+						required
 					/>
+				</Form.Group>
 				</Form.Group>
 				<div className="mb-3">
 					<Button type="submit">Sign Up</Button>

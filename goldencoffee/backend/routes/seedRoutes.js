@@ -15,3 +15,7 @@ seedRouter.get('/', async (req, res) => {
 	res.send({ createdProducts, createdUsers })
 })
 export default seedRouter
+
+// localhost:5000/api/seed
+// deletes all data in collection
+// inserts data from data.js

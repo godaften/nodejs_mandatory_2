@@ -48,7 +48,7 @@ function HomeScreen() {
 			<Helmet>
 				<title>Golden Coffee</title>
 			</Helmet>
-			<h1>Featured Products</h1>
+			<h1>Hot Coffee</h1>
 			<div className="products">
 				{loading ? (
 					<LoadingBox />
@@ -57,7 +57,7 @@ function HomeScreen() {
 				) : (
 					<Row>
 						{products.map((product) => (
-							<Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+							<Col key={product.slug} sm={6} md={4} lg={3} className="mb-5">
 								<Product product={product}></Product>
 							</Col>
 						))}

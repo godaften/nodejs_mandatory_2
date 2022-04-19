@@ -14,6 +14,8 @@ import { Store } from './Store'
 import CartScreen from './screens/CartScreen'
 import SigninScreen from './screens/SigninScreen'
 import SignUpScreen from './screens/SignUpScreen'
+import ProfileScreen from './screens/ProfileScreen'
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
 	const { state, dispatch: ctxDispatch } = useContext(Store)
@@ -22,6 +24,7 @@ function App() {
 	const signoutHandler = () => {
 		ctxDispatch({ type: 'USER_SIGNOUT' })
 		localStorage.removeItem('userInfo')
+		window.location.href = '/signin';
 	}
 
 	return (
@@ -48,9 +51,9 @@ function App() {
 										<LinkContainer to="/profile">
 											<NavDropdown.Item>User Profile</NavDropdown.Item>
 										</LinkContainer>
-										<LinkContainer to="/orderhistory">
+										{/* <LinkContainer to="/orderhistory">
 											<NavDropdown.Item>Order History</NavDropdown.Item>
-										</LinkContainer>
+										</LinkContainer> */}
 										<NavDropdown.Divider />
 										<Link
 											className="dropdown-item"
@@ -76,12 +79,21 @@ function App() {
 							<Route path="/cart" element={<CartScreen />} />
 							<Route path="/signin" element={<SigninScreen />} />
 							<Route path="/signup" element={<SignUpScreen />} />
+							{/* <Route path="/profile" element={<ProfileScreen />} /> */}
 							<Route path="/" element={<HomeScreen />} />
+							<Route
+                path="/profile"
+                element={
+                  <ProtectedRoute>
+                    <ProfileScreen />
+                  </ProtectedRoute>
+                }
+              />
 						</Routes>
 					</Container>
 				</main>
 				<footer>
-					<div className="text-center">Copyright by Golden Coffee</div>
+					<div className="footer text-center">Copyright by Golden Coffee</div>
 				</footer>
 			</div>
 		</BrowserRouter>

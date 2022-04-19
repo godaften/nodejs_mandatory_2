@@ -14,12 +14,12 @@ const data = {
 		// 	password: bcrypt.hashSync('123456',5),
 		// 	isAdmin: false,
 		// },
-		{
-			name: 'Jens',
-			email: 'jens@goldencoffee.com',
-			password: bcrypt.hashSync('123456',10),
-			isAdmin: false,
-		},
+		// {
+		// 	name: 'Jens',
+		// 	email: 'jens@goldencoffee.com',
+		// 	password: bcrypt.hashSync('123456',10),
+		// 	isAdmin: false,
+		// },
 	],
 
 	products: [
@@ -43,7 +43,7 @@ const data = {
 			category: 'Coffee Variants',
 			image: '/images/medium-roasted-1.jpg',
 			price: 100,
-			countInStock: 0,
+			countInStock: 10,
 			brand: 'Golden Coffee',
 			rating: 4.5,
 			numReviews: 10,

@@ -13,6 +13,7 @@ import LoadingBox from '../components/LoadingBox'
 import MessageBox from '../components/MessageBox'
 import { getError } from '../utils'
 import { Store } from '../Store'
+import ListGroupItem from 'react-bootstrap/esm/ListGroupItem'
 
 const reducer = (state, action) => {
 	switch (action.type) {
@@ -91,19 +92,23 @@ function ProductScreen() {
 							</Helmet>
 							<h1>{product.name}</h1>
 						</ListGroup.Item>
-						<ListGroup.Item>
+						{/* <ListGroup.Item>
 							<Rating
 								rating={product.rating}
 								numReviews={product.numReviews}
 							></Rating>
-						</ListGroup.Item>
-						<ListGroup.Item>Price : ${product.price}</ListGroup.Item>
+						</ListGroup.Item> */}
+						<ListGroup.Item>Price : {product.price} kr. </ListGroup.Item>
 						<ListGroup.Item>
 							Description:
 							<p>{product.description}</p>
 						</ListGroup.Item>
+						<ListGroupItem><Button onClick={addToCartHandler} variant="primary">
+												Add to Cart
+											</Button></ListGroupItem>
 					</ListGroup>
 				</Col>
+{/* 
 				<Col md={3}>
 					<Card>
 						<Card.Body>
@@ -112,6 +117,7 @@ function ProductScreen() {
 									<Row>
 										<Col>Price:</Col>
 										<Col>${product.price}</Col>
+										
 									</Row>
 								</ListGroup.Item>
 								<ListGroup.Item>
@@ -130,6 +136,7 @@ function ProductScreen() {
 								{product.countInStock > 0 && (
 									<ListGroup.Item>
 										<div className="d-grid">
+
 											<Button onClick={addToCartHandler} variant="primary">
 												Add to Cart
 											</Button>
@@ -139,7 +146,7 @@ function ProductScreen() {
 							</ListGroup>
 						</Card.Body>
 					</Card>
-				</Col>
+				</Col> */}
 			</Row>
 		</div>
 	)
