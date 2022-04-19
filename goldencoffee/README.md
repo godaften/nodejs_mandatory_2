@@ -18,3 +18,5 @@ Authentication with bcrypt
 Authorization with jwt
 
 Protected route to user profile (must be signed in)
+
+See app live https://goldencoffee.herokuapp.com/
